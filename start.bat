@@ -1,0 +1,9 @@
+@echo off
+echo Starting Visa Translator Web Application...
+echo.
+echo Installing dependencies...
+pip install -r requirements.txt
+echo.
+echo Starting server...
+python app.py
+pause

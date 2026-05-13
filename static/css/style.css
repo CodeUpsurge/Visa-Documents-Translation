@@ -1,0 +1,172 @@
+/* Custom styles for Visa Translator */
+
+/* Drop Zone */
+.drop-zone {
+    border: 2px dashed #0d6efd;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+    border-color: #0d6efd;
+    background-color: #e7f1ff;
+}
+
+.drop-zone.dragover {
+    transform: scale(1.02);
+}
+
+.drop-zone-content {
+    pointer-events: none;
+}
+
+.drop-zone-content i {
+    display: block;
+}
+
+/* File List */
+.file-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.file-item:hover {
+    background-color: #e9ecef;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-icon {
+    font-size: 1.5rem;
+    color: #0d6efd;
+}
+
+.file-name {
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.file-size {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.file-remove {
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.file-remove:hover {
+    color: #a71d2a;
+}
+
+/* Progress */
+.progress {
+    height: 25px;
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-body {
+    border-radius: 15px;
+}
+
+/* Buttons */
+.btn-lg {
+    padding: 12px 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.file-item {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .drop-zone {
+        padding: 30px 15px;
+    }
+
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Header */
+header h1 {
+    color: #0d6efd;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+/* Loading state */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-loading .btn-text {
+    visibility: hidden;
+}
+
+/* Success animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#resultArea .btn-success {
+    animation: pulse 0.5s ease;
+}
+
+/* Language select */
+.form-select {
+    cursor: pointer;
+}
+
+/* File type icons */
+.file-icon.pdf { color: #dc3545; }
+.file-icon.xlsx, .file-icon.xls { color: #198754; }
+.file-icon.png, .file-icon.jpg, .file-icon.jpeg, .file-icon.gif { color: #fd7e14; }
